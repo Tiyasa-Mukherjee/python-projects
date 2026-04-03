@@ -34,6 +34,10 @@ D. Chennai
 Your answer (A/B/C/D): B
 ✅ Correct!
 
+## Requirements
+- Python 3.x
+- No external libraries needed — pure Python!
+
 ## Built With
 Python 3.14
 
