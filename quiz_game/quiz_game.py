@@ -57,7 +57,33 @@ questions = [
         "question": "What is 2 ** 10?",
         "options"  : ["A. 512", "B. 1024", "C. 2048", "D. 256"],
         "answer"   : "B"
+    },
+    {
+    "question": "Who directed the movie 'Inception'?",
+    "options"  : ["A. Steven Spielberg", "B. Christopher Nolan", "C. James Cameron", "D. Quentin Tarantino"],
+    "answer"   : "B"
+    },
+    {
+    "question": "Which country won the Cricket World Cup in 2011?",
+    "options"  : ["A. Australia", "B. England", "C. India", "D. Sri Lanka"],
+    "answer"   : "C"
+    },
+    {
+    "question": "What is the speed of light in vacuum?",
+    "options"  : ["A. 3 x 10^8 m/s", "B. 3 x 10^6 m/s", "C. 3 x 10^5 km/s", "D. 1.5 x 10^8 m/s"],
+    "answer"   : "A"
+    },
+    {
+    "question": "Which Python data type is immutable?",
+    "options"  : ["A. List", "B. Dictionary", "C. Set", "D. Tuple"],
+    "answer"   : "D"
+    },
+    {
+    "question": "Which element has the chemical symbol 'Na'?",
+    "options"  : ["A. Nitrogen", "B. Sodium", "C. Neon", "D. Nickel"],
+    "answer"   : "B"
     }
+
 ]
 print("\n ------- Welcome to the Quiz Game ------- \n")
 quiz_game(questions)

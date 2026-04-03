@@ -1,0 +1,111 @@
+# 2. Student Grade Manager
+# - Add students and their marks
+# - Calculate average, grade, rank
+# - Find topper, find failures
+# Uses: dictionaries, lists, loops, functions, conditionals
+
+def add_student(students):
+    name = input("Enter student name :")
+    marks = int(input("Enter student marks :"))
+    students[name]=marks
+    print("Student added successfully.")
+    
+def display(students):
+    print(f"Student List : \n {students }")
+
+def calculate_average(students):
+    if len(students)==0:
+        print("No data available to calculate average.")
+    else:
+        average = sum(students.values())/len(students)
+        print(f"The average marks of the students : {average}")
+
+def calculate_grade(marks):
+    if marks>=90:
+        return "A"
+    elif marks>=80:
+        return "B"
+    elif marks>=70:
+        return "C"
+    elif marks>=60:
+        return "D"
+    elif marks<60 and marks>=40:
+        return "E"
+    else:
+        return "F"
+    
+def show_grades(students):
+    for name,marks in students.items():
+        grade = calculate_grade(marks)
+        print(f"Grade of {name} : {grade}")
+
+
+def find_topper(students):
+    marks = 0
+    topper = ""
+    for i in students:
+        if students[i]>=marks:
+            marks = students[i]
+            topper = i
+    print(f"The topper is {topper} with marks {marks}. ")
+
+def find_failures(students):
+    failures = []
+
+    for name, marks in students.items():
+        if marks < 40:
+            failures.append(f"{name} : {marks}")
+
+    if failures:
+        print("The students who failed are:")
+        for f in failures:
+            print(f)
+    else:
+        print("No failures found.")
+
+def rank_students(students):
+    if not students:
+        print("No students found to rank.")
+        return
+    else:
+        sorted_students = sorted(students.items(),key = lambda x:x[1],reverse=True)
+        print("Student Rankings :")
+        for i , (name,marks) in enumerate(sorted_students,start=1):
+            print(f"{i}. {name} : {marks}")
+students = {}
+while True:
+    print("\n ------- Welcome to Student Grade Manager ------- \n")
+    print("1. Add Student")
+    print("2. Calculate Average")
+    print("3. Display Students List")
+    print("4. Show Grades")
+    print("5. Find Topper")
+    print("6. Find the Failures")
+    print("7. Rank Students")
+    print("8. Exit")
+    choice = int(input("Enter your choice :"))
+    if choice==1:
+        add_student(students)
+    elif choice==2:
+        calculate_average(students)
+    elif choice==3:
+        display(students)
+    elif choice==4:
+        show_grades(students)
+    elif choice==5:
+        find_topper(students)
+    elif choice==6:
+        find_failures(students)
+    elif choice==7:
+        rank_students(students)
+    elif choice==8:
+        print("Exiting Student Grade Manager ....")
+        break
+    else:
+        print("Invalid choice . Please try again.")
+
+
+
+            
+
+

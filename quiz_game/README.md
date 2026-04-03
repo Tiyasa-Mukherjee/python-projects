@@ -12,12 +12,12 @@ A command-line quiz game built with Python.
 ## How to Run
 
 1. Clone this repository
-   git clone https://github.com/YourUsername/python-projects.git
+   git clone https://github.com/Tiyasa-Mukherjee/python-projects.git
 
 2. Navigate to quiz_game folder
    cd python-projects/quiz_game
 
-3. Run the game
+3. Run the game 
    python quiz_game.py
 
 ## Sample Output
@@ -39,4 +39,3 @@ Python 3.14
 
 ## Author
 Tiyasa — BTech AIML Student
-Learning Python from scratch — Day 7 of my journey 🚀
